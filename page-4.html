@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Waterfall and Lavender Garden</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style>
+  h1 {
+    font-size: 2.5em;
+    color: #0077cc;
+    margin-bottom: 0.4em;
+  }
+  p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 2em;
+    line-height: 1.6em;
+  }
+  img {
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  #extraPhotos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .small-img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+  }
+  a.back, a.Next {
+    display: inline-block;
+    margin: 40px 15px 0;
+    color: #0077cc;
+    text-decoration: none;
+  }
+  a.back:hover, a.Next:hover { color: #E36CFC; }
+</style>
+</head>
+
+<body>
+
+<h1>The Waterfall and Lavender Garden</h1>
+
+<p>
+This page displays photos of the waterfall and lavender garden in Hokkaido!
+</p>
+
+<p>Click the image to see more photos and videos!</p>
+
+<img src="images/lavender-garden.JPG" id="mainPhoto" alt="Lavender garden">
+
+<div id="extraPhotos">
+  <img src="images/lavender-garden-2.jpg" class="small-img" alt="More lavender garden">
+  <img src="images/top-view-of-garden.jpg" class="small-img" alt="Top view of garden">
+  <img src="images/photo-with-mom.jpg" class="small-img" alt="Photo with mom">
+</div>
+
+
+<p> <a href="images/waterfall.mp4" target="_blank"> <img src="images/waterfall-image.HEIC" id="waterfallPhoto" alt="Waterfall">&nbsp;</a></p>
+<p> <a href="chapter-2-pg-3.html" class="back">← Back to page 3</a>&nbsp;</p>
+<p><a href="index.html" class="Next"> Go to Chapter list →</a></p>
+<script>
+  document.getElementById("mainPhoto").onclick = function() {
+    document.querySelectorAll(".small-img").forEach(img => img.style.display = "block");
+  };
+</script>
+
+</body>
+</html>

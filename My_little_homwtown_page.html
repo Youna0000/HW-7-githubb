@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chapter 1: My Little Hometown</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<style>
+  img { cursor: pointer; width: 600px; height: 600px; border-radius: 8px; }
+  video {
+    width: 400px; 
+    height: auto;
+    display: none;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  a.back { display: block; margin-top: 40px; color: #0077cc; text-decoration: none; }
+</style>
+</head>
+
+<body>
+
+<h1>Chapter 1: My Little Hometown</h1>
+
+<p>
+This is my hometown, a cozy city in South Korea — the place where my family and dog live.  
+I’ve attached my last summer memories from my hometown, filled with warm light, familiar nostalgic streets,  
+and the peaceful cycle of everyday life.
+</p>
+<p> click images to view the videos or more images! </p>
+<img src="images/dog.JPG" id="photo" alt="My hometown">
+
+<video id="video" controls>
+  <source src="images/dog.mp4" type="video/mp4">
+</video>
+
+
+<a href="index.html" class="back">← Back to the Chapter list</a>
+<a href="Page-2.html" class="next"> Go to page 2 </a>
+
+<script>
+  document.getElementById("photo").onclick = function() {
+    const v = document.getElementById("video");
+    v.style.display = "block"; // 같은 탭에 작게 표시
+    v.play();
+  };
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Geographical Photos of My Hometown</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style>
+  img {
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  /* 작은 이미지 스타일 */
+  #extraPhotos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px; /* 메인 이미지와의 간격 */
+  }
+  .small-img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+    display: none; /* 처음엔 안 보이게 */
+  }
+  a.back {
+    display: block;
+    margin-top: 40px;
+    color: #0077cc;
+    text-decoration: none;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Geographical Photos of My Hometown</h1>
+
+<p>
+More photos that display my hometown — its peaceful streets, surrounding hills,  
+and the familiar scenery that captures everyday life in my city.
+</p>
+
+<p>Click the image to see more photos!</p>
+
+<!-- 메인 이미지 -->
+<img src="images/map-of-home.jpg" id="mainPhoto" alt="Hometown landscape">
+
+<!-- 클릭 시 나타날 작은 이미지들 -->
+<div id="extraPhotos">
+  <img src="images/apartment-front.jpg" class="small-img" alt="Street view of hometown">
+  <img src="images/road-view.jpg" class="small-img" alt="Road view of hometown">
+  <img src="images/road-with-flower.jpg" class="small-img" alt="Road view with flower">
+</div>
+	
+
+<a href="My_little_homwtown_page.html" class="back">← Back to Page 1</a>
+<a href="chapter-2-pg-3.html" class="Next">← Go to Page 3</a>
+
+<script>
+  document.getElementById("mainPhoto").onclick = function() {
+    const photos = document.querySelectorAll(".small-img");
+    photos.forEach(img => img.style.display = "block"); // 한 줄 아래에 정렬
+  };
+</script>
+
+</body>
+</html>
+

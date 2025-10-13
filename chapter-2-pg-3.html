@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>Chapter 2: Trip to Japan!</title>
+<style>
+  img { cursor: pointer; width: 800px; height: 600px; border-radius: 8px; }
+  video {
+    width: 400px; 
+    height: auto;
+    display: none;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  a.back { display: block; margin-top: 40px; color: #0077cc; text-decoration: none; }
+</style>
+</head>
+
+<body>
+
+<h1>Chapter 2: Trip to Japan!</h1>
+
+<p>
+This is about my summer trip to Hokkaido, Japan. Me and my mom visited Hokkaido's famous places, including the Sapporo city, lavender garden, lake BB, and the Waterfall. 
+</p>
+<p> click images to view the videos or more images! </p>
+<img src="images/lakeBB.HEIC" id="photo" alt="lakeBB">
+<p> It was small, but pretty.</p>
+
+
+<video id="video" controls>
+  <source src="images/lakeBB.mp4" type="video/mp4">
+</video>
+
+
+
+<a href="Page-2.html" class="back">← Back to Page 2</a>
+<a href="Page-2.html" class="next"> Go to page 4 </a>
+
+<script>
+  document.getElementById("photo").onclick = function() {
+    const v = document.getElementById("video");
+    v.style.display = "block"; // 같은 탭에 작게 표시
+    v.play();
+  };
+</script>
+
+</body>
+</html>
+
